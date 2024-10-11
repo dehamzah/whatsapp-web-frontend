@@ -1,5 +1,3 @@
-import React from "react";
-import { Card } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import ChatBubble from "../ChatBubble";
 import ChatDetailHeader from "../ChatDetailHeader";
@@ -12,14 +10,29 @@ export const ChatDetailContainer = () => {
 
       <ScrollArea>
         <div className="flex h-svh flex-col gap-1 px-8 pb-8 pt-20">
-          <Card className="max-w-xs self-start px-3 py-2">
-            <div>
-              <span className="text-md">Halo halo</span>
-            </div>
-            <div className="text-right text-xs">21:20</div>
-          </Card>
+          <ChatBubble
+            variant="receiver"
+            messageText="Halo"
+            messageSentAt={new Date().toISOString()}
+          />
+          <ChatBubble
+            variant="sender"
+            messageText="Hai"
+            messageSentAt={new Date().toISOString()}
+          />
+          <ChatBubble
+            variant="receiver"
+            messageText="Apa kabar?"
+            messageSentAt={new Date().toISOString()}
+          />
+          <ChatBubble
+            variant="sender"
+            messageText="baik"
+            messageSentAt={new Date().toISOString()}
+          />
 
-          <div className="max-w-full">
+          {/* todo: example component for horizontal scroll messages */}
+          {/* <div className="max-w-full">
             <div className="flex snap-x snap-mandatory gap-1 overflow-x-auto">
               <div className="w-80 flex-none shrink-0 snap-center"></div>
               <Card className="w-80 flex-none snap-center bg-green-200 px-3 py-2">
@@ -56,11 +69,7 @@ export const ChatDetailContainer = () => {
                 <div className="text-right text-xs">21:20</div>
               </Card>
             </div>
-
-            <ChatBubble />
-            <ChatBubble />
-            <ChatBubble />
-          </div>
+          </div> */}
         </div>
       </ScrollArea>
 
