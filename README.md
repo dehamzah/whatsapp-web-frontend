@@ -1,50 +1,42 @@
-# React + TypeScript + Vite
+# WIP: WhatsApp Web Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Objectives
 
-Currently, two official plugins are available:
+This project acts as a refresh for re-learning frontend web development with best practices and modern tooling. With the fast-paced front-end development area, the tools that we used last year might be replaced with better tools in the next years.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I plan to build a WhatsApp Web Frontend focusing on the app architecture, UI, state management, and testing. Most of the work here is the real world scenario when you are building a frontend web app.
 
-## Expanding the ESLint configuration
+## Tech stacks
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Vite for the build tool
+- Vitest for testing framework
+- React for the frontend UI library
+- Jotai for react state management
+- TailwindCSS for the CSS framework
+- Shadcn UI for Base UI
+- Mock Service Worker for the mock API server
+- Storybook for component library
 
-- Configure the top-level `parserOptions` property like this:
+## Development
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Requirements
+
+- nodejs >= v20
+
+Install dependencies
+
+```
+npm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Run the app
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+```
+npm run dev
+```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+Run the storybook
+
+```
+npm run storybook
 ```
