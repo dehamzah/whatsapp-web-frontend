@@ -3,10 +3,13 @@ import calendar from "dayjs/plugin/calendar";
 
 dayjs.extend(calendar);
 
-// todo: add the tests
+/**
+ * It will convert to human readable calendar time given the param iso date string.
+ */
 export function toCalendarTime(isoDate: string) {
-  return dayjs().calendar(dayjs(isoDate), {
+  return dayjs(isoDate).calendar(undefined, {
     sameDay: "hh:mm",
-    lastDay: "Yesterday",
+    lastDay: "[Yesterday]",
+    sameElse: "DD/MM/YYYY",
   });
 }
