@@ -1,4 +1,3 @@
-import React from "react";
 import { EllipsisVertical, SearchIcon, VideoIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
