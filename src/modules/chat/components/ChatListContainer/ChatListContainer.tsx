@@ -1,4 +1,3 @@
-import React from "react";
 import ChatListItem from "../ChatListItem";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import ChatListHeader from "../ChatListHeader";

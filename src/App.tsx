@@ -1,4 +1,3 @@
-import React from "react";
 import MainChatPage from "./modules/chat/components/MainChatPage";
 
 function App() {

@@ -1,5 +1,3 @@
-import React from "react";
-
 export const ChatListItem = () => {
   return (
     <div className="flex px-4">
