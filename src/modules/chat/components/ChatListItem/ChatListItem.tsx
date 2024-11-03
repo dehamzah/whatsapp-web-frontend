@@ -8,7 +8,7 @@ export const ChatListItem = () => {
       />
       <div className="ml-4 flex grow border-b py-3">
         <div className="grow">
-          <h6 className="font-medium">Fahmi Syahida</h6>
+          <h6 className="font-medium">Fulan Fulana</h6>
           <p className="font-light">Halo apa kabar?</p>
         </div>
         <div className="flex flex-col items-end">
