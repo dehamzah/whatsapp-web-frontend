@@ -5,34 +5,160 @@ import ChatDetailFooter from "../ChatDetailFooter";
 
 export const ChatDetailContainer = () => {
   return (
-    <div className="relative">
+    <div className="relative h-full">
       <ChatDetailHeader />
 
-      <ScrollArea>
-        <div className="flex h-svh flex-col gap-1 px-8 pb-8 pt-20">
-          <ChatBubble
-            variant="receiver"
-            messageText="Halo"
-            messageSentAt={new Date().toISOString()}
-          />
-          <ChatBubble
-            variant="sender"
-            messageText="Hai"
-            messageSentAt={new Date().toISOString()}
-          />
-          <ChatBubble
-            variant="receiver"
-            messageText="Apa kabar?"
-            messageSentAt={new Date().toISOString()}
-          />
-          <ChatBubble
-            variant="sender"
-            messageText="baik"
-            messageSentAt={new Date().toISOString()}
-          />
+      <div className="pt-16">
+        {/* note: h-[calc(100vh-9.5rem)] -> minus 9.5rem is from:
+        WindowContainer padding top 1rem + WindowContainer padding bottom 1rem + 
+        ChatDetailHeader 4rem + ChatDetailFooter 3.5rem.
+        The ScrollArea height need to defined fixed height.
+        todo: find out later to not calculate the height manually.  */}
+        <ScrollArea className="h-[calc(100vh-9.5rem)]">
+          <div className="flex flex-col gap-1 px-8 pb-6 pt-6">
+            <ChatBubble
+              variant="receiver"
+              messageText="Halo"
+              messageSentAt={new Date().toISOString()}
+            />
+            <ChatBubble
+              variant="sender"
+              messageText="Hai"
+              messageSentAt={new Date().toISOString()}
+            />
+            <ChatBubble
+              variant="receiver"
+              messageText="Apa kabar?"
+              messageSentAt={new Date().toISOString()}
+            />
+            <ChatBubble
+              variant="sender"
+              messageText="baik"
+              messageSentAt={new Date().toISOString()}
+            />
+            <ChatBubble
+              variant="receiver"
+              messageText="Halo"
+              messageSentAt={new Date().toISOString()}
+            />
+            <ChatBubble
+              variant="sender"
+              messageText="Hai"
+              messageSentAt={new Date().toISOString()}
+            />
+            <ChatBubble
+              variant="receiver"
+              messageText="Apa kabar?"
+              messageSentAt={new Date().toISOString()}
+            />
+            <ChatBubble
+              variant="sender"
+              messageText="baik"
+              messageSentAt={new Date().toISOString()}
+            />
+            <ChatBubble
+              variant="receiver"
+              messageText="Halo"
+              messageSentAt={new Date().toISOString()}
+            />
+            <ChatBubble
+              variant="sender"
+              messageText="Hai"
+              messageSentAt={new Date().toISOString()}
+            />
+            <ChatBubble
+              variant="receiver"
+              messageText="Apa kabar?"
+              messageSentAt={new Date().toISOString()}
+            />
+            <ChatBubble
+              variant="sender"
+              messageText="baik"
+              messageSentAt={new Date().toISOString()}
+            />
+            <ChatBubble
+              variant="receiver"
+              messageText="Halo"
+              messageSentAt={new Date().toISOString()}
+            />
+            <ChatBubble
+              variant="sender"
+              messageText="Hai"
+              messageSentAt={new Date().toISOString()}
+            />
+            <ChatBubble
+              variant="receiver"
+              messageText="Apa kabar?"
+              messageSentAt={new Date().toISOString()}
+            />
+            <ChatBubble
+              variant="sender"
+              messageText="baik"
+              messageSentAt={new Date().toISOString()}
+            />
+            <ChatBubble
+              variant="receiver"
+              messageText="Halo"
+              messageSentAt={new Date().toISOString()}
+            />
+            <ChatBubble
+              variant="sender"
+              messageText="Hai"
+              messageSentAt={new Date().toISOString()}
+            />
+            <ChatBubble
+              variant="receiver"
+              messageText="Apa kabar?"
+              messageSentAt={new Date().toISOString()}
+            />
+            <ChatBubble
+              variant="sender"
+              messageText="baik"
+              messageSentAt={new Date().toISOString()}
+            />
+            <ChatBubble
+              variant="receiver"
+              messageText="Halo"
+              messageSentAt={new Date().toISOString()}
+            />
+            <ChatBubble
+              variant="sender"
+              messageText="Hai"
+              messageSentAt={new Date().toISOString()}
+            />
+            <ChatBubble
+              variant="receiver"
+              messageText="Apa kabar?"
+              messageSentAt={new Date().toISOString()}
+            />
+            <ChatBubble
+              variant="sender"
+              messageText="baik"
+              messageSentAt={new Date().toISOString()}
+            />
+            <ChatBubble
+              variant="receiver"
+              messageText="Halo"
+              messageSentAt={new Date().toISOString()}
+            />
+            <ChatBubble
+              variant="sender"
+              messageText="Hai"
+              messageSentAt={new Date().toISOString()}
+            />
+            <ChatBubble
+              variant="receiver"
+              messageText="Apa kabar?"
+              messageSentAt={new Date().toISOString()}
+            />
+            <ChatBubble
+              variant="sender"
+              messageText="baik"
+              messageSentAt={new Date().toISOString()}
+            />
 
-          {/* todo: example component for horizontal scroll messages */}
-          {/* <div className="max-w-full">
+            {/* todo: example component for horizontal scroll messages */}
+            {/* <div className="max-w-full">
             <div className="flex snap-x snap-mandatory gap-1 overflow-x-auto">
               <div className="w-80 flex-none shrink-0 snap-center"></div>
               <Card className="w-80 flex-none snap-center bg-green-200 px-3 py-2">
@@ -70,8 +196,9 @@ export const ChatDetailContainer = () => {
               </Card>
             </div>
           </div> */}
-        </div>
-      </ScrollArea>
+          </div>
+        </ScrollArea>
+      </div>
 
       <ChatDetailFooter />
     </div>

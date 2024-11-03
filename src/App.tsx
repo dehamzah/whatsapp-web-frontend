@@ -1,10 +1,11 @@
 import MainChatPage from "./modules/chat/components/MainChatPage";
+import WindowContainer from "./modules/core/components/WindowContainer";
 
 function App() {
   return (
-    <div className="font-sans">
+    <WindowContainer>
       <MainChatPage />
-    </div>
+    </WindowContainer>
   );
 }
 
